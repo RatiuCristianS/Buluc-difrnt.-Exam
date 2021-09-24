@@ -1,0 +1,674 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+/* Font End */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animații */
+
+/* Animații End*/
+
+/* Global */
+body {
+  background-color: #1d1b26;
+}
+/* End Global */
+
+/* Navigație */
+
+.hidden {
+  display: none !important;
+}
+
+.z-custom {
+  z-index: 99999999999;
+}
+
+.nav-bar-buluc {
+  height: 50px;
+  background-color: #1d1b26;
+  color: white;
+  padding: 0 116px;
+}
+
+.custom-logo-link {
+  position: absolute;
+  left: 116px;
+}
+
+.main-nav ul ul {
+  display: none;
+}
+
+.main-nav ul li:hover > ul {
+  transition-timing-function: ease-in-out;
+  transition-delay: 1000ms;
+  display: block;
+}
+
+.main-nav ul ul {
+  display: none;
+  left: 0;
+  padding: 10px 20px;
+  position: absolute;
+  z-index: 99999;
+  width: 180px;
+  background-color: #1d1b26;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav li {
+  position: relative;
+  display: inline;
+  margin: 0 25px 0px 25px;
+}
+
+.main-nav li a {
+  padding: 0 5px 11px 5px;
+}
+
+.main-nav li:hover a,
+.current-menu-item a {
+  color: #0085e5;
+  padding-bottom: 8px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-bottom: #0085e5 4px solid;
+  font-weight: 500;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigatie Tip Hamburger */
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.humburger_menu .change:first-child {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.humburger_menu .change:nth-child(2) {
+  opacity: 0;
+}
+
+.humburger_menu .change:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Haburger End */
+
+/* Navigație End */
+
+/* Front-Page BG*/
+.text-front-container {
+  padding-top: 40vh;
+  position: relative;
+  z-index: 9999999;
+}
+
+.nume-front {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 104px;
+  text-align: center;
+  color: #ffff;
+}
+
+.nume-front .punct {
+  color: #0085e5;
+  position: relative;
+  right: 0;
+  top: 14px;
+  font-size: 50px;
+}
+
+.front-container {
+  height: 95vh;
+  position: absolute;
+  width: 100%;
+  background-image: url(http://buluc.local/wp-content/themes/buluc/includes/images/Shooting_Femeie.jpg);
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: 55% 50%;
+  background-color: rgba(1, 1, 1, 1);
+}
+
+.detail-center {
+  color: #ffff;
+  font-size: 24px;
+  line-height: 52px;
+}
+
+.front-container::before {
+  content: "";
+  position: absolute;
+  max-width: 845px;
+  width: 100%;
+  height: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 80px;
+  background: rgba(0, 133, 230, 0.7);
+  filter: blur(200px);
+}
+
+/* Front-Page BG End */
+
+/* Front-Page CineSuntem Start */
+.cine_suntem_main {
+  box-sizing: border-box;
+  max-width: 1024px;
+  height: 550px;
+  position: relative;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-right: auto;
+  padding: 0px 17px;
+}
+.cine_suntem_container {
+  border: 2px solid #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.cine_suntem_container_inside {
+  background-color: #12101b;
+  position: relative;
+  left: 25px;
+  bottom: 25px;
+  height: 100%;
+  width: 100%;
+}
+/* Front-Page CineSuntem End */
+
+/* Slider */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.slider .navigation {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider .navigation .btn {
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider .navigation .btn.active {
+  background: #0085e6;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.linie {
+  border-top: 1px solid #ffffff;
+  width: 87px;
+  position: relative;
+  top: 80px;
+  left: 80px;
+}
+
+.titlu_slider {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 70px;
+  color: #ffff;
+  text-align: left;
+  position: relative;
+  top: 119px;
+  padding-left: 15%;
+}
+
+.titlu_slider .punct {
+  color: #0085e5;
+  position: relative;
+  right: 0;
+  top: 14px;
+  font-size: 50px;
+}
+
+.mini-container {
+  padding-top: 190px;
+  max-width: 312px;
+}
+
+.titlu-min {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  color: #0085e6;
+}
+
+.text-min-content {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #bbbbbe;
+}
+
+.buton-min {
+  margin-top: 20px;
+  background: #0085e6;
+  border-radius: 60px;
+  max-width: 137px;
+  height: 35px;
+  width: 100%;
+  color: #ffff;
+}
+
+.buton-min:hover {
+  background: #0067b1;
+}
+
+
+/* Slider End */
+
+/* Universal Start */
+.universal-text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: #ffff;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.universal-time {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.box-content {
+  width: 90%;
+  position: relative;
+  bottom: 75px;
+  min-height: 225px;
+  justify-content: center;
+}
+/* Universal End */
+
+/* Spectacole */
+.subtitlu-primar {
+  font-size: 38px;
+  line-height: 82px;
+  color: #ffff;
+}
+
+#spectacol .box-legatura:first-child .box-content{
+  background-color:#d9534a;
+}
+
+#spectacol .box-content{
+  background-color:#0085E6;
+}
+/* Spectacole End */
+
+/* Proiecte Starts */
+#proiect .box-content{
+  background-color: #12101B;
+}
+
+#proiect .buton-min{
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Proiecte End*/
+
+/* Oamenii Buluc*/
+#oameni .buton-min{
+  transform: translate(-50%);
+}
+
+#oameni .box-content .parte_unu{
+  background-color:#D9534A;
+  height: 100px;
+  padding: 15px;
+}
+#oameni .box-content .parte_doi{
+  background-color:#C7362C;
+  height: 120px;
+  padding: 15px 0;
+}
+
+#oameni .box-content .parte_doi p{
+  color: #ffff;
+  text-align: center;
+  font-weight: 400;
+}
+
+#oameni .box-content .parte_unu h1{
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 31px;
+text-align: center;
+color: #ffff;
+padding-bottom: 5px;
+}
+
+#oameni .box-content .parte_unu p{
+  color: #FFB0AA;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+}
+
+#oameni .box-legatura:nth-child(2) .box-content .parte_unu{
+  background-color:#0085E5;
+}
+
+#oameni .box-legatura:nth-child(2) .box-content .parte_unu p{
+  color: #83CBFF;
+}
+
+#oameni .box-legatura:nth-child(2) .box-content .parte_doi{
+  background-color:#00528D;;
+}
+/* Oamenii End*/
+
+@screen pc {
+  .humburger_menu {
+    display: none;
+  }
+}
+
+@screen phone {
+  .front-container::before {
+    bottom: 150px;
+  }
+  .box-content{
+    max-width:400px;
+  }
+  .div_donatie .buton-min-red{
+    bottom:100px !important;
+  }
+  .div_donatie p{
+    top:100px !important; 
+  }
+  .footer_div .container {
+    max-width: 100%;
+    text-align:center;
+  }
+  .footer_div .contact_us{
+    max-width: 100%;
+  }
+  .footer_div .social{
+    justify-content: center;
+    margin-bottom:10px;
+  }
+  .footer_div{
+    padding:25px;
+  }
+  .front-container {
+    height: 50vh;
+  }
+  .text-front-container {
+    padding-top: 10vh;
+  }
+  .cine_suntem_container_inside {
+    left: 0;
+    bottom: 0;
+  }
+  .cine_suntem_container {
+    border: none;
+  }
+  /* Slider */
+  .slider-height_unu {
+    min-height: 250px;
+  }
+  .slider-height_doi {
+    min-height: 500px;
+  }
+  .cine_suntem_main {
+    height: 700px;
+  }
+  .mini-container {
+    max-width: 100%;
+    padding: 60px;
+  }
+  .slider .navigation {
+    left: 20%;
+  }
+  #spectacol{
+    max-width: 100%;
+  }
+  #oameni{
+    max-width: 100%;
+  }
+
+  #proiect{
+    max-width: 100%;
+  }
+  /* Slider-End */
+}
+
+.div_donatie{
+  max-width: 700px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 100px;
+}
+
+.div_donatie p{
+  padding-top:20px;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #BBBBBE;
+  position: relative;
+  top: 175px;
+  padding: 10px;
+}
+
+.buton-min-red{
+
+    max-width: 137px;
+    height: 35px;
+    width: 100%;
+    bottom: 200px;
+    color: #ffff;
+    background: #D9534A;
+    border-radius: 5px;
+    transform: translate(-50%);
+}
+
+.buton-min-red:hover{
+  background: #a73f37;
+}
+
+.footer_div{
+  width: 100%;
+  background: #12101B;
+  min-height: 236px;
+}
+
+.contact_us{
+  padding-top: 40px;
+  max-width: 70%;
+}
+
+.opening_hours{
+  padding-top: 40px;
+}
+
+.social{
+  margin-top: 25px;
+}
+
+
+.contact_us h1, .opening_hours h1{
+  padding-bottom: 15px;
+  color: #D9534A;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+.contact_us p, .opening_hours p{
+  color: #ffff;
+}
+
+.social div{
+  margin: 0 10px;
+}
+.social div:hover svg{
+width: 15px;
+}
+.social div:hover svg path{
+  fill: #a73f37;
+}
+
+
+
+@screen sm {
+  .main-nav {
+    display: none;
+    justify-content: center;
+  }
+  .humburger_menu {
+    position: relative;
+    z-index: 999999999;
+  }
+
+  .hamburger-mobile {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    background-color: #1d1b26;
+    z-index: 99999999;
+    width: 100%;
+    left: 0;
+  }
+  .nume {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61.3789px;
+    line-height: 80px;
+    color: #fff;
+    margin-top: 160px;
+  }
+  .nume .punct {
+    color: #0085e5;
+    position: relative;
+    right: 0;
+    top: 14px;
+    font-size: 50px;
+  }
+  .main-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  .transition_op {
+    top: 0;
+    display: block;
+  }
+
+  .nav-bar-buluc {
+    padding: 30px 17px;
+  }
+
+  .custom-logo-link {
+    position: absolute;
+    left: 17px;
+  }
+
+  .main-nav-mobile li {
+    margin-bottom: 30px;
+  }
+
+  .main-nav-mobile li:first-child {
+    margin-top: 30px;
+  }
+
+  .main-nav-mobile li a {
+    font-size: 18.48px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #0085e5;
+  }
+
+  .main-nav-mobile li:hover a,
+  .main-nav-mobile .current-menu-item a {
+    color: #ffffff;
+    border-bottom: none;
+    font-weight: 400;
+  }
+}
+
+@screen lg {
+  .main-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-bar-buluc {
+    padding: 0 116px;
+  }
+  .custom-logo-link {
+    position: absolute;
+    left: 116px;
+  }
+}
